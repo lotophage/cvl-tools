@@ -1,0 +1,22 @@
+<tool id="POSMinus" name="POSMinus" version="0.1.3">
+  <description>POSMinus</description>
+  <parallelism method="basic"></parallelism>
+  <command>
+    /usr/local/posminus/0.1.3/POSminus
+       "$POS_all"
+       "$POS_minus"
+       "$range"
+  </command>
+  <requirements>
+    <requirement type="package">/usr/local/posminus/0.1.3/POSminus</requirement>
+  </requirements>
+  <inputs>
+    <param name="POS_all" type="data" label="First POS filename (contains all atoms)" help="" format="POS" />
+    <param name="POS_minus" type="data" label="Second POS filename (contains atoms to be minus&#39;ed from the first POS file)" help="" format="POS" />
+  </inputs>
+  <outputs>
+    <data name="range" label="${tool.name} on ${on_string}: Range file name" format="POS" ></data>
+  </outputs>
+  <help>
+  </help>
+</tool>
